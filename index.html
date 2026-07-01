@@ -3,292 +3,268 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nityara AI | Empowering Schools, Universities & Enterprises with Practical AI</title>
-<meta name="description" content="Nityara AI helps schools, colleges, universities and enterprises adopt AI through workshops, bootcamps, faculty development programs, AI consulting and intelligent solutions.">
+<title>Nityara AI | AI Education, Automation & Intelligent Solutions</title>
+<meta name="description" content="Nityara AI empowers schools, colleges, universities and businesses with practical AI education, hands-on workshops, AI automation, chatbots, voice agents, document processing, QA automation and intelligent business solutions.">
 <script src="https://cdn.tailwindcss.com"></script>
+<link rel="icon" type="image/png" href="images/nityara-logo.png">
 
 <style>
-html { scroll-behavior:smooth; }
+:root{
+    --cyan:#22d3ee;
+    --blue:#2563eb;
+    --violet:#7c3aed;
+    --dark:#020617;
+}
+html{scroll-behavior:smooth;}
 body{
-background:#030712;
-color:#F9FAFB;
-font-family:Inter,system-ui,sans-serif;
+    background:var(--dark);
+    color:#F9FAFB;
+    font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    overflow-x:hidden;
 }
 .hero{
+    position:relative;
     background:
-        linear-gradient(
-            rgba(3,7,18,0.72),
-            rgba(3,7,18,0.88)
-        ),
+        radial-gradient(circle at 18% 18%, rgba(34,211,238,.25), transparent 28%),
+        radial-gradient(circle at 82% 10%, rgba(124,58,237,.26), transparent 34%),
+        linear-gradient(rgba(2,6,23,.68),rgba(2,6,23,.95)),
         url("images/hero-ai.png");
-    background-size: cover;
-    background-position: center 20%;
-    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:center 20%;
+    background-repeat:no-repeat;
+}
+.hero:before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:
+        linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+    background-size:46px 46px;
+    mask-image:linear-gradient(to bottom, black, transparent 78%);
+    pointer-events:none;
 }
 .glass{
-background:rgba(17,24,39,.75);
-backdrop-filter:blur(12px);
-border:1px solid rgba(255,255,255,.08);
+    background:linear-gradient(145deg, rgba(15,23,42,.84), rgba(2,6,23,.76));
+    backdrop-filter:blur(16px);
+    border:1px solid rgba(255,255,255,.10);
+    box-shadow:0 22px 60px rgba(0,0,0,.26);
 }
+.card-hover{transition:transform .25s ease, border-color .25s ease, box-shadow .25s ease;}
+.card-hover:hover{transform:translateY(-6px);border-color:rgba(34,211,238,.5);box-shadow:0 26px 85px rgba(34,211,238,.09);}
+.gradient-text{background:linear-gradient(90deg,#67e8f9,#60a5fa,#c084fc);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.badge{border:1px solid rgba(34,211,238,.35);background:rgba(8,145,178,.10);color:#a5f3fc;}
+.section-glow{position:relative;}
+.section-glow:before{content:"";position:absolute;inset:auto 10% -90px 10%;height:180px;background:radial-gradient(circle,rgba(34,211,238,.12),transparent 65%);pointer-events:none;}
 </style>
-<link rel="icon" type="image/png" href="images/nityara-logo.png">
 </head>
 
 <body>
 
-<header class="sticky top-0 z-50 bg-black/70 backdrop-blur border-b border-gray-800">
-<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-<a href="/" class="flex items-center">
-    <img
-        src="images/nityara-logo.png"
-        alt="Nityara AI Logo"
-        class="h-12 w-auto"
-    >
-</a>
+<header class="sticky top-0 z-50 bg-black/70 backdrop-blur-xl border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="#home" class="flex items-center gap-3">
+            <img src="images/nityara-logo.png" alt="Nityara AI Logo" class="h-12 w-auto">
+            <span class="hidden sm:block font-bold tracking-wide">Nityara AI</span>
+        </a>
 
-<nav class="hidden md:flex gap-6 text-gray-300">
-<a href="#about" class="hover:text-white">About</a>
-<a href="#programs" class="hover:text-white">Programs</a>
-<a href="#audience" class="hover:text-white">Who We Serve</a>
-<a href="#founder" class="hover:text-white">Founder</a>
-<a href="#contact" class="hover:text-white">Contact</a>
-</nav>
-</div>
+        <nav class="hidden lg:flex gap-7 text-sm text-gray-300">
+            <a href="#education" class="hover:text-white">AI Education</a>
+            <a href="#automation" class="hover:text-white">Automation</a>
+            <a href="#industries" class="hover:text-white">Industries</a>
+            <a href="#solution" class="hover:text-white">Solution</a>
+            <a href="#founder" class="hover:text-white">Founder</a>
+            <a href="#contact" class="hover:text-white">Contact</a>
+        </nav>
+
+        <a href="https://forms.gle/CA4K8YfjmZa1Ytap7" target="_blank" class="hidden md:inline-flex bg-cyan-500 hover:bg-cyan-400 text-black px-5 py-3 rounded-xl font-semibold transition">
+            Book Consultation
+        </a>
+    </div>
 </header>
 
-<section class="hero min-h-screen flex items-center py-20 px-6 text-center">
+<section id="home" class="hero min-h-screen flex items-center px-6 py-24">
+    <div class="relative max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+            <div class="inline-flex badge px-5 py-2 rounded-full text-sm font-semibold mb-7">
+                AI Education + AI Automation + Intelligent Solutions
+            </div>
 
-    <div class="max-w-5xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-extrabold leading-tight">
+                Empowering Learning & Business with <span class="gradient-text">Practical AI</span>
+            </h1>
 
-        <div class="inline-block border border-cyan-400 text-cyan-300 px-5 py-2 rounded-full bg-black/20 backdrop-blur-sm">
-            Transforming Learning Through AI
+            <p class="text-xl text-gray-300 mt-8 leading-9 max-w-3xl">
+                Nityara AI helps schools, colleges, universities and businesses understand, adopt and implement Artificial Intelligence through workshops, bootcamps, AI consulting, automation solutions, chatbots, voice agents and intelligent workflow systems.
+            </p>
+
+            <div class="mt-10 flex flex-wrap gap-4">
+                <a href="https://forms.gle/CA4K8YfjmZa1Ytap7" target="_blank" class="bg-cyan-500 hover:bg-cyan-400 text-black px-8 py-4 rounded-xl font-bold shadow-lg shadow-cyan-500/20 transition">
+                    Start Your AI Journey
+                </a>
+                <a href="#solution" class="border border-cyan-400/60 hover:bg-cyan-500/10 px-8 py-4 rounded-xl font-semibold transition">
+                    Explore Solutions
+                </a>
+            </div>
         </div>
 
-        <h2 class="text-5xl md:text-7xl font-extrabold mt-8 leading-tight">
-            Empowering Schools,<br>
-            Universities & Enterprises<br>
-            with Practical AI
-        </h2>
-
-        <p class="text-xl text-gray-200 mt-8 max-w-3xl mx-auto leading-9">
-            Nityara AI helps educational institutions and organizations adopt
-            Artificial Intelligence through workshops, bootcamps, faculty
-            development programs, corporate training, AI consulting, and
-            intelligent solutions.
-        </p>
-
-        <div class="mt-12 flex justify-center gap-5 flex-wrap">
-
-            <a href="https://forms.gle/CA4K8YfjmZa1Ytap7"
-               target="_blank"
-               class="bg-cyan-500 hover:bg-cyan-600 transition px-8 py-4 rounded-xl font-semibold shadow-lg">
-                Book Consultation
-            </a>
-
-            <a href="#programs"
-               class="border border-cyan-400 hover:bg-cyan-500/10 px-8 py-4 rounded-xl transition">
-                Explore Programs
-            </a>
-
+        <div class="glass rounded-3xl p-7 lg:p-9">
+            <p class="text-cyan-300 font-semibold mb-5">One company. Two powerful outcomes.</p>
+            <div class="space-y-5">
+                <div class="p-5 rounded-2xl bg-white/5 border border-white/10">
+                    <h3 class="text-2xl font-bold">AI Education & Workshops</h3>
+                    <p class="text-gray-300 mt-2">Train students, faculty and teams with future-ready AI skills, prompt engineering, GenAI awareness and practical AI tools.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-white/5 border border-white/10">
+                    <h3 class="text-2xl font-bold">AI Automation & Software Solutions</h3>
+                    <p class="text-gray-300 mt-2">Build business-ready AI assistants, chatbots, WhatsApp bots, document automation, CRM workflows and AI QA solutions.</p>
+                </div>
+            </div>
         </div>
+    </div>
+</section>
 
+<section class="max-w-7xl mx-auto px-6 py-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+    <div class="glass p-6 rounded-2xl text-center"><h3 class="text-4xl font-extrabold text-cyan-400">12+</h3><p class="text-gray-300 mt-2">Years Industry Experience</p></div>
+    <div class="glass p-6 rounded-2xl text-center"><h3 class="text-4xl font-extrabold text-cyan-400">2-in-1</h3><p class="text-gray-300 mt-2">Education + Automation</p></div>
+    <div class="glass p-6 rounded-2xl text-center"><h3 class="text-4xl font-extrabold text-cyan-400">AI</h3><p class="text-gray-300 mt-2">Training, Tools & Consulting</p></div>
+    <div class="glass p-6 rounded-2xl text-center"><h3 class="text-4xl font-extrabold text-cyan-400">ROI</h3><p class="text-gray-300 mt-2">Productivity & Growth Focus</p></div>
+</section>
+
+<section id="education" class="max-w-7xl mx-auto px-6 py-24 section-glow">
+    <div class="max-w-3xl mx-auto text-center mb-14">
+        <span class="badge px-4 py-2 rounded-full text-sm font-semibold">AI Education</span>
+        <h2 class="text-4xl md:text-5xl font-extrabold mt-6">Empowering Schools, Colleges & Universities</h2>
+        <p class="text-gray-300 text-lg leading-8 mt-6">We help institutions prepare students and faculty for the AI-powered future through practical, engaging and outcome-driven learning programs.</p>
     </div>
 
-</section>
-<section class="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-4 gap-5">
-
-<div class="glass p-6 rounded-xl text-center">
-<h3 class="text-3xl font-bold text-cyan-400">12+</h3>
-<p>Years Industry Experience</p>
-</div>
-
-<div class="glass p-6 rounded-xl text-center">
-<h3 class="text-3xl font-bold text-cyan-400">GenAI</h3>
-<p>Generative AI Expertise</p>
-</div>
-
-<div class="glass p-6 rounded-xl text-center">
-<h3 class="text-3xl font-bold text-cyan-400">Enterprise</h3>
-<p>Technology Background</p>
-</div>
-
-<div class="glass p-6 rounded-xl text-center">
-<h3 class="text-3xl font-bold text-cyan-400">Future</h3>
-<p>Ready Learning Programs</p>
-</div>
-
+    <div class="grid md:grid-cols-3 gap-6">
+        <div class="glass card-hover p-8 rounded-2xl"><h3 class="text-2xl font-bold text-cyan-300">AI Awareness & Future Careers</h3><p class="text-gray-300 mt-4 leading-7">Introduce students to AI fundamentals, Generative AI, career opportunities, responsible usage and real-world applications.</p></div>
+        <div class="glass card-hover p-8 rounded-2xl"><h3 class="text-2xl font-bold text-cyan-300">Prompt Engineering Masterclass</h3><p class="text-gray-300 mt-4 leading-7">Hands-on training with ChatGPT, prompt patterns, productivity tools, AI agents and practical business use cases.</p></div>
+        <div class="glass card-hover p-8 rounded-2xl"><h3 class="text-2xl font-bold text-cyan-300">Faculty Development Programs</h3><p class="text-gray-300 mt-4 leading-7">Help educators use AI for teaching, research, lesson planning, assessments, content creation and student engagement.</p></div>
+    </div>
 </section>
 
-<section id="about" class="max-w-6xl mx-auto px-6 py-20">
-<h2 class="text-4xl font-bold mb-8">About Nityara AI</h2>
+<section id="automation" class="bg-slate-950 px-6 py-24">
+    <div class="max-w-7xl mx-auto">
+        <div class="max-w-3xl mb-14">
+            <span class="badge px-4 py-2 rounded-full text-sm font-semibold">AI Automation Company</span>
+            <h2 class="text-4xl md:text-5xl font-extrabold mt-6">Helping Businesses Automate Work Using AI</h2>
+            <p class="text-gray-300 text-lg leading-8 mt-6">Nityara AI designs and builds practical automation solutions that reduce manual work, improve customer experience, speed up operations and increase business productivity.</p>
+        </div>
 
-<p class="text-gray-300 text-lg leading-8">
-Nityara AI was founded with a vision to bridge the gap between education, industry, and emerging Artificial Intelligence technologies. Our mission is to help students, educators, professionals, and organizations build future-ready AI capabilities through practical learning, real-world applications, and responsible AI adoption.
-</p>
-
-<p class="text-gray-400 text-lg leading-8 mt-6">
-We believe AI should not remain a theoretical concept. Through hands-on experiences, industry-driven insights, and practical use cases, we empower institutions and enterprises to unlock the full potential of Artificial Intelligence.
-</p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="glass card-hover p-7 rounded-2xl"><h3 class="text-xl font-bold text-cyan-300">Customer Support Chatbots</h3><p class="text-gray-300 mt-3">24/7 AI assistants for FAQs, lead capture, service queries and customer engagement.</p></div>
+            <div class="glass card-hover p-7 rounded-2xl"><h3 class="text-xl font-bold text-cyan-300">HR AI Assistant</h3><p class="text-gray-300 mt-3">Automate HR policies, onboarding, employee FAQs, leave information and internal support.</p></div>
+            <div class="glass card-hover p-7 rounded-2xl"><h3 class="text-xl font-bold text-cyan-300">AI Voice Calling Agent</h3><p class="text-gray-300 mt-3">AI-powered calling for appointment booking, reminders, follow-ups and customer conversations.</p></div>
+            <div class="glass card-hover p-7 rounded-2xl"><h3 class="text-xl font-bold text-cyan-300">AI Document Processing</h3><p class="text-gray-300 mt-3">Extract, summarize and validate data from PDFs, forms, invoices, applications and records.</p></div>
+            <div class="glass card-hover p-7 rounded-2xl"><h3 class="text-xl font-bold text-cyan-300">Workflow, CRM & WhatsApp Automation</h3><p class="text-gray-300 mt-3">Connect forms, WhatsApp, email, CRM, spreadsheets and business apps into smart workflows.</p></div>
+            <div class="glass card-hover p-7 rounded-2xl"><h3 class="text-xl font-bold text-cyan-300">AI Testing & QA Services</h3><p class="text-gray-300 mt-3">AI-assisted test automation, chatbot testing, LLM evaluation, API validation and quality engineering.</p></div>
+        </div>
+    </div>
 </section>
 
-<section id="programs" class="bg-gray-950 py-20 px-6">
-
-<div class="max-w-6xl mx-auto">
-
-<h2 class="text-4xl font-bold text-center mb-12">
-Our Programs
-</h2>
-
-<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-<div class="glass p-8 rounded-xl">
-<h3 class="text-cyan-400 text-xl font-bold">AI Awareness Programs</h3>
-<p class="mt-4 text-gray-300">
-Introduce students and educators to Artificial Intelligence, emerging technologies, and future career opportunities.
-</p>
-</div>
-
-<div class="glass p-8 rounded-xl">
-<h3 class="text-cyan-400 text-xl font-bold">Generative AI Workshops</h3>
-<p class="mt-4 text-gray-300">
-Hands-on learning with ChatGPT, Microsoft Copilot, Prompt Engineering, AI Productivity Tools, and AI Agents.
-</p>
-</div>
-
-<div class="glass p-8 rounded-xl">
-<h3 class="text-cyan-400 text-xl font-bold">Faculty Development Programs</h3>
-<p class="mt-4 text-gray-300">
-Help educators integrate AI into teaching methodologies, curriculum enhancement, and research initiatives.
-</p>
-</div>
-
-<div class="glass p-8 rounded-xl">
-<h3 class="text-cyan-400 text-xl font-bold">Student AI Bootcamps</h3>
-<p class="mt-4 text-gray-300">
-Practical AI learning experiences designed to improve innovation, employability, and future career readiness.
-</p>
-</div>
-
-<div class="glass p-8 rounded-xl">
-<h3 class="text-cyan-400 text-xl font-bold">Corporate AI Upskilling</h3>
-<p class="mt-4 text-gray-300">
-Enable teams to improve productivity, decision-making, innovation, and business outcomes through AI adoption.
-</p>
-</div>
-
-<div class="glass p-8 rounded-xl">
-<h3 class="text-cyan-400 text-xl font-bold">AI for QA & Engineering</h3>
-<p class="mt-4 text-gray-300">
-Specialized programs focused on AI-powered testing, automation acceleration, software quality, and engineering excellence.
-</p>
-</div>
-
-</div>
-</div>
+<section id="industries" class="max-w-7xl mx-auto px-6 py-24">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="badge px-4 py-2 rounded-full text-sm font-semibold">Who We Serve</span>
+        <h2 class="text-4xl md:text-5xl font-extrabold mt-6">Built for Education and Business Sectors</h2>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-5 text-center">
+        <div class="glass p-6 rounded-2xl">Schools</div>
+        <div class="glass p-6 rounded-2xl">Colleges</div>
+        <div class="glass p-6 rounded-2xl">Universities</div>
+        <div class="glass p-6 rounded-2xl">Hospitals</div>
+        <div class="glass p-6 rounded-2xl">Clinics</div>
+        <div class="glass p-6 rounded-2xl">Logistics</div>
+        <div class="glass p-6 rounded-2xl">Real Estate</div>
+        <div class="glass p-6 rounded-2xl">Manufacturing</div>
+    </div>
 </section>
 
-<section id="audience" class="max-w-6xl mx-auto px-6 py-20">
-
-<h2 class="text-4xl font-bold text-center mb-12">
-Who We Serve
-</h2>
-
-<div class="grid md:grid-cols-5 gap-5 text-center">
-
-<div class="glass p-6 rounded-xl">Schools</div>
-<div class="glass p-6 rounded-xl">Colleges</div>
-<div class="glass p-6 rounded-xl">Universities</div>
-<div class="glass p-6 rounded-xl">Corporate Teams</div>
-<div class="glass p-6 rounded-xl">Startups</div>
-
-</div>
+<section id="solution" class="bg-slate-950 px-6 py-24">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+            <span class="badge px-4 py-2 rounded-full text-sm font-semibold">Example Solution</span>
+            <h2 class="text-4xl md:text-5xl font-extrabold mt-6">Dental Clinic AI Automation</h2>
+            <p class="text-gray-300 text-lg leading-8 mt-6">A practical example of how Nityara AI can transform daily operations for a local clinic.</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="glass p-8 rounded-2xl border-red-400/20">
+                <h3 class="text-2xl font-bold text-red-300">Before</h3>
+                <p class="text-gray-300 mt-5 leading-8">Receptionist answers repetitive calls all day, manually books appointments, follows up with patients and handles the same FAQs again and again.</p>
+            </div>
+            <div class="glass p-8 rounded-2xl border-cyan-400/30">
+                <h3 class="text-2xl font-bold text-cyan-300">After</h3>
+                <ul class="text-gray-300 mt-5 space-y-3">
+                    <li>✓ AI answers patient queries</li>
+                    <li>✓ Books appointments</li>
+                    <li>✓ Sends reminders</li>
+                    <li>✓ Handles FAQs</li>
+                    <li>✓ Captures leads and follow-ups</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </section>
 
-<section id="founder" class="bg-gray-950 py-20 px-6">
+<section class="max-w-7xl mx-auto px-6 py-24">
+    <div class="max-w-3xl mx-auto text-center mb-14">
+        <span class="badge px-4 py-2 rounded-full text-sm font-semibold">How We Work</span>
+        <h2 class="text-4xl md:text-5xl font-extrabold mt-6">From Awareness to Implementation</h2>
+        <p class="text-gray-300 text-lg leading-8 mt-6">We do not just teach AI. We help you identify use cases, train your people and implement solutions that create measurable value.</p>
+    </div>
 
-<div class="max-w-5xl mx-auto glass rounded-2xl p-10">
-
-<h2 class="text-4xl font-bold mb-4">
-Founder & Principal AI Consultant
-</h2>
-
-<h3 class="text-2xl text-cyan-400 font-semibold mb-6">
-Abhinav Sarikwal
-</h3>
-
-<p class="text-gray-300 leading-8 text-lg">
-Abhinav Sarikwal is a technology leader with over 12 years of experience in Software Quality Engineering, Test Automation, Enterprise Platforms, Digital Transformation, and Artificial Intelligence.
-</p>
-
-<p class="text-gray-300 leading-8 text-lg mt-5">
-Throughout his professional journey, he has contributed to large-scale enterprise initiatives, helping organizations improve quality, accelerate delivery, optimize processes, and successfully adopt emerging technologies.
-</p>
-
-<p class="text-gray-300 leading-8 text-lg mt-5">
-Through Nityara AI, Abhinav is focused on empowering schools, colleges, universities, and enterprises with practical AI skills, real-world industry insights, and future-ready capabilities that bridge the gap between academic learning and industry expectations.
-</p>
-
-<p class="text-gray-300 leading-8 text-lg mt-5">
-His mission is to make Artificial Intelligence accessible, impactful, and responsible by enabling students, educators, and professionals to leverage AI confidently in their learning, careers, and organizations.
-</p>
-
-<div class="grid md:grid-cols-4 gap-4 mt-10">
-
-<div class="glass p-4 rounded-xl text-center">Generative AI</div>
-<div class="glass p-4 rounded-xl text-center">Prompt Engineering</div>
-<div class="glass p-4 rounded-xl text-center">Agentic AI</div>
-<div class="glass p-4 rounded-xl text-center">AI for QA</div>
-<div class="glass p-4 rounded-xl text-center">Enterprise Automation</div>
-<div class="glass p-4 rounded-xl text-center">Digital Transformation</div>
-<div class="glass p-4 rounded-xl text-center">AI Productivity</div>
-<div class="glass p-4 rounded-xl text-center">Technology Leadership</div>
-
-</div>
-
-</div>
+    <div class="grid md:grid-cols-4 gap-6">
+        <div class="glass p-7 rounded-2xl"><p class="text-cyan-300 font-bold">01</p><h3 class="text-xl font-bold mt-3">Discover</h3><p class="text-gray-300 mt-3">Understand your goals, audience, processes and automation opportunities.</p></div>
+        <div class="glass p-7 rounded-2xl"><p class="text-cyan-300 font-bold">02</p><h3 class="text-xl font-bold mt-3">Educate</h3><p class="text-gray-300 mt-3">Run AI workshops, awareness sessions and practical training for your teams.</p></div>
+        <div class="glass p-7 rounded-2xl"><p class="text-cyan-300 font-bold">03</p><h3 class="text-xl font-bold mt-3">Build</h3><p class="text-gray-300 mt-3">Create chatbots, agents, automation workflows and custom AI solutions.</p></div>
+        <div class="glass p-7 rounded-2xl"><p class="text-cyan-300 font-bold">04</p><h3 class="text-xl font-bold mt-3">Scale</h3><p class="text-gray-300 mt-3">Measure impact, improve adoption and expand AI across departments.</p></div>
+    </div>
 </section>
 
-<section class="py-20 px-6 text-center">
-
-<div class="max-w-4xl mx-auto glass rounded-2xl p-10">
-
-<h2 class="text-4xl font-bold">
-Ready to Build AI Capabilities?
-</h2>
-
-<p class="mt-6 text-gray-300 text-lg">
-Whether you are a school, college, university, startup, or enterprise, Nityara AI can help design customized AI learning and transformation journeys.
-</p>
-
-<a href="https://forms.gle/CA4K8YfjmZa1Ytap7" target="_blank" class="inline-block mt-8 bg-cyan-500 hover:bg-cyan-600 px-8 py-4 rounded-xl font-semibold">
-Schedule Consultation
-</a>
-
-</div>
-
+<section id="founder" class="bg-slate-950 py-24 px-6">
+    <div class="max-w-6xl mx-auto glass rounded-3xl p-10 lg:p-12">
+        <h2 class="text-4xl font-extrabold mb-4">Founder & Principal AI Consultant</h2>
+        <h3 class="text-2xl text-cyan-300 font-semibold mb-6">Abhinav Sarikwal</h3>
+        <p class="text-gray-300 leading-8 text-lg">Abhinav Sarikwal is a technology professional with 12+ years of experience in Software Quality Engineering, Test Automation, Enterprise Platforms, Digital Transformation and Artificial Intelligence.</p>
+        <p class="text-gray-300 leading-8 text-lg mt-5">Through Nityara AI, he is focused on making Artificial Intelligence practical, accessible and business-ready for schools, colleges, universities, startups and enterprises.</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
+            <div class="glass p-4 rounded-xl text-center">Generative AI</div>
+            <div class="glass p-4 rounded-xl text-center">Prompt Engineering</div>
+            <div class="glass p-4 rounded-xl text-center">AI Automation</div>
+            <div class="glass p-4 rounded-xl text-center">Agentic AI</div>
+            <div class="glass p-4 rounded-xl text-center">AI for QA</div>
+            <div class="glass p-4 rounded-xl text-center">RAG Solutions</div>
+            <div class="glass p-4 rounded-xl text-center">Workflow Automation</div>
+            <div class="glass p-4 rounded-xl text-center">Technology Leadership</div>
+        </div>
+    </div>
 </section>
 
-<section id="contact" class="py-20 px-6">
-
-<div class="max-w-3xl mx-auto glass rounded-2xl p-10 text-center">
-
-<h2 class="text-4xl font-bold">Contact Us</h2>
-
-<p class="mt-8">📞 +91 8496993331</p>
-<p class="mt-3">📧 contact.nityaraai@gmail.com</p>
-
-</div>
-
+<section class="py-24 px-6 text-center">
+    <div class="max-w-4xl mx-auto glass rounded-3xl p-10 lg:p-14">
+        <h2 class="text-4xl md:text-5xl font-extrabold">Ready to Build AI Capabilities and Automate Your Work?</h2>
+        <p class="mt-6 text-gray-300 text-lg leading-8">Whether you are a school, college, university, clinic, hospital, logistics company, real estate firm or enterprise team, Nityara AI can help you move from AI awareness to real AI implementation.</p>
+        <a href="https://forms.gle/CA4K8YfjmZa1Ytap7" target="_blank" class="inline-block mt-9 bg-cyan-500 hover:bg-cyan-400 text-black px-9 py-4 rounded-xl font-bold transition">
+            Schedule Free Consultation
+        </a>
+    </div>
 </section>
 
-<footer class="border-t border-gray-800 py-10 text-center text-gray-500">
+<section id="contact" class="py-20 px-6 bg-slate-950">
+    <div class="max-w-3xl mx-auto glass rounded-3xl p-10 text-center">
+        <h2 class="text-4xl font-extrabold">Contact Nityara AI</h2>
+        <p class="mt-5 text-gray-300">Let us discuss your AI workshop, automation idea or custom AI solution.</p>
+        <div class="mt-8 space-y-3 text-lg">
+            <p>📞 +91 8496993331</p>
+            <p>📧 contact.nityaraai@gmail.com</p>
+        </div>
+    </div>
+</section>
 
-<p>© 2026 Nityara AI. All Rights Reserved.</p>
-
-<p class="mt-2">
-Empowering Schools, Universities & Enterprises with Practical AI
-</p>
-
+<footer class="border-t border-white/10 py-10 text-center text-gray-500 px-6">
+    <p>© 2026 Nityara AI. All Rights Reserved.</p>
+    <p class="mt-2">AI Education • AI Automation • Intelligent Business Solutions</p>
 </footer>
 
 </body>
